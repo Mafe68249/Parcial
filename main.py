@@ -29,12 +29,12 @@ caballeros = [
 def showCaballero():
     return caballeros
 
-@app.post("/fight")
+@app.get("/fight")
 def fightCaballero(caballero: Caballero):
     resultado = f"{caballero.name} ataca con poder {caballero.attack}"
     return {"resultado": resultado}
 
-@app.post("/constelation")
+@app.get("/constelation")
 def showConstellation(caballero: Caballero):
     return {"constelation": caballero.constelation}
 
